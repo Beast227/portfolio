@@ -10,7 +10,7 @@ interface NavButtonProps {
 const NavButton = ({ buttonName } : NavButtonProps) => {
   return (
     <StyledWrapper>
-      <button className="button">{buttonName}</button>
+      <a className="button" href={`#${buttonName}`}>{buttonName}</a>
     </StyledWrapper>
   );
 }

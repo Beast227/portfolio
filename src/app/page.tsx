@@ -4,9 +4,10 @@ import NavButton from "@/components/NavButtons";
 import SocialLinks from "@/components/SocialLinks";
 // No longer need to import Typewriter here
 // FIX: Import the renamed component
-import HeroText from '@/components/HeroText'; // Adjust the path if necessary
+import Home from '@/components/Home'; // Adjust the path if necessary
+import Skills from "@/components/Skills";
 
-export default function Home() {
+export default function Portfolio() {
   return (
     <div className="flex flex-col content-center min-h-screen p-4 space-y-5">
 
@@ -24,10 +25,11 @@ export default function Home() {
 
       {/*Text section*/}
       {/* FIX: Call the renamed component */}
-      <HeroText />
+      <Home />
+
+      <Skills />
 
       <div className="flex flex-col items-center space-y-5">
-        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">Let's connect</p>
         <SocialLinks />
       </div>
     </div>

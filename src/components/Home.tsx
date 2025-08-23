@@ -2,35 +2,39 @@
 
 import Typewriter from 'typewriter-effect';
 import Image from 'next/image';
+import profilePic from '../../public/profile.jpeg';
 
-// --- IMPORTANT ---
-// 1. Make sure your image 'profile.jpeg' is inside the `public` folder.
-// 2. The `src` prop below now uses the correct root path.
-import profilePic from '../../public/profile.jpeg'; // Adjust the path if necessary
-
-const HeroText = () => {
+const Home = () => {
   return (
-    // Section container: takes up the full screen height
-    <section className="flex items-center justify-center w-full min-h-screen px-4 py-16 md:py-20">
-      <div className="grid items-center gap-12 md:grid-cols-2 max-w-6xl mx-auto">
+    <section id="Home" className="flex items-center hero-section justify-center w-full h-[calc(100vh-5rem)] px-2 relative overflow-hidden bg-black">
+      
+      {/* Torchlight background effect */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Glow behind the image */}
+        <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-radial from-blue-500/30 via-blue-500/10 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        
+        {/* Glow behind the text */}
+        <div className="absolute top-1/2 left-2/3 w-[600px] h-[600px] bg-radial from-purple-500/30 via-purple-500/10 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 grid items-center gap-12 md:grid-cols-2 max-w-9xl mx-auto">
         
         {/* Column 1: Profile Image */}
-        {/* On mobile this appears first (on top) */}
         <div className="flex justify-center">
           <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
             <Image
-              src={profilePic} // Corrected path for images in the /public folder
+              src={profilePic}
               alt="Bangera Paveen"
               layout="fill"
               objectFit="cover"
-              className="rounded-full border-4 border-blue-500/50 shadow-2xl"
+              className="rounded-full border-4 border-gray-600 shadow-lg"
               placeholder="blur"
             />
           </div>
         </div>
 
         {/* Column 2: Text Content */}
-        {/* On mobile this appears second (below the image) */}
         <div className="text-center md:text-left">
           <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white">
             <Typewriter
@@ -56,4 +60,4 @@ const HeroText = () => {
   );
 }
 
-export default HeroText;
+export default Home;
