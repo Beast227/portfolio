@@ -1,6 +1,10 @@
+// In page.tsx
 "use client";
 import NavButton from "@/components/NavButtons";
 import SocialLinks from "@/components/SocialLinks";
+// No longer need to import Typewriter here
+// FIX: Import the renamed component
+import HeroText from '@/components/HeroText'; // Adjust the path if necessary
 
 export default function Home() {
   return (
@@ -19,10 +23,8 @@ export default function Home() {
       </div>
 
       {/*Text section*/}
-      <div className="flex flex-col space-y-15 items-center">
-        <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-left">Welcome,</p>
-        <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">I am Full Stack Developer</p>
-      </div>
+      {/* FIX: Call the renamed component */}
+      <HeroText />
 
       <div className="flex flex-col items-center space-y-5">
         <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">Let's connect</p>
