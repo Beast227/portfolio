@@ -1,3 +1,5 @@
+// In components/NavButton.tsx
+
 "use client"
 
 import React from 'react';
@@ -18,54 +20,47 @@ const NavButton = ({ buttonName } : NavButtonProps) => {
 const StyledWrapper = styled.div`
   .button {
     min-width: 120px;
-
     position: relative;
     cursor: pointer;
-
     padding: 12px 17px;
     border: 0;
     border-radius: 7px;
+    color: rgb(255, 255, 255, 0.7);
+    font-weight: 500;
+    text-align: center;
+    background-color: transparent; // Start with no background
 
-    // /* The box-shadow property that created the border effect has been removed. */
-    // background: radial-gradient(
-    //   ellipse at bottom,
-    //   rgba(71, 81, 92, 1) 0%,
-    //   rgba(11, 21, 30, 1) 45%
-    // );
-
-    color: rgb(255, 255, 255, 0.66);
-
-    transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+    /* Faster, smoother transition for all properties */
+    transition: all 0.4s ease-in-out;
   }
 
+  /* This is the underline element */
   .button::before {
     content: "";
-    width: 70%;
+    width: 100%;
     height: 1px;
-
     position: absolute;
     bottom: 0;
-    left: 15%;
+    left: 0;
+    background: white;
+    
+    /* Start scaled down to 0, making it invisible */
+    transform: scaleX(0);
+    transform-origin: center; /* Ensures it grows from the middle */
 
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 50%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    opacity: 0.2;
-
-    transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+    /* Transition the transform property for the growth effect */
+    transition: transform 0.4s ease-in-out;
   }
 
   .button:hover {
-    color: rgb(255, 255, 255, 1);
-    transform: scale(1.1) translateY(-3px);
+    color: white;
+    transform: scale(1.05) translateY(-2px); /* Slightly more subtle transform */
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle glow */
   }
 
+  /* On hover, scale the underline to its full width */
   .button:hover::before {
-    opacity: 1;
+    transform: scaleX(1);
   }
 `;
 

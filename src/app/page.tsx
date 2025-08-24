@@ -6,22 +6,14 @@ import SocialLinks from "@/components/SocialLinks";
 // FIX: Import the renamed component
 import Home from '@/components/Home'; // Adjust the path if necessary
 import Skills from "@/components/Skills";
+import Navbar from "@/components/NavBar";
 
 export default function Portfolio() {
   return (
-    <div className="flex flex-col content-center min-h-screen p-4 space-y-5">
+    <div className="flex flex-col content-center min-h-screen">
 
       {/* Nav section */}
-      <div className="flex flex-row justify-center items-center">
-        <nav>
-          <ul className="flex space-x-8">
-            <li><NavButton buttonName="Home"></NavButton></li>
-            <li><NavButton buttonName="About me"></NavButton></li>
-            <li><NavButton buttonName="My Skills"></NavButton></li>
-            <li><NavButton buttonName="Projects"></NavButton></li>
-          </ul>
-        </nav>
-      </div>
+      <Navbar />
 
       {/*Text section*/}
       {/* FIX: Call the renamed component */}

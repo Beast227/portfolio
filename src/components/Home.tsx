@@ -2,7 +2,7 @@
 
 import Typewriter from 'typewriter-effect';
 import Image from 'next/image';
-import profilePic from '../../public/profile.jpeg';
+// import profilePic from '../../public/profile.jpeg';
 
 const Home = () => {
   return (
@@ -11,16 +11,16 @@ const Home = () => {
       {/* Torchlight background effect */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Glow behind the image */}
-        <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-radial from-blue-500/30 via-blue-500/10 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bg-radial from-blue-500/30 via-blue-500/10 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         
         {/* Glow behind the text */}
-        <div className="absolute top-1/2 left-2/3 w-[600px] h-[600px] bg-radial from-purple-500/30 via-purple-500/10 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute top-1/2 left-1/2 w-[800px] h-[500px] bg-radial from-purple-500/30 via-purple-500/10 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 grid items-center gap-12 md:grid-cols-2 max-w-9xl mx-auto">
+      {/* <div className="relative z-10 grid items-center gap-12 md:grid-cols-2 max-w-9xl mx-auto"> */}
         
-        {/* Column 1: Profile Image */}
+        {/* Column 1: Profile Image
         <div className="flex justify-center">
           <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
             <Image
@@ -32,7 +32,7 @@ const Home = () => {
               placeholder="blur"
             />
           </div>
-        </div>
+        </div> */}
 
         {/* Column 2: Text Content */}
         <div className="text-center md:text-left">
@@ -55,7 +55,7 @@ const Home = () => {
           </p>
         </div>
 
-      </div>
+      {/* </div> */}
     </section>
   );
 }
