@@ -46,7 +46,7 @@ const Navbar = () => {
       >
         <ul className="flex items-center space-x-4 sm:space-x-8">
           <li><NavButton buttonName="Home" /></li>
-          <li><NavButton buttonName="About me" /></li>
+          <li><NavButton buttonName="About Me" /></li>
           <li><NavButton buttonName="My Skills" /></li>
           <li><NavButton buttonName="Projects" /></li>
         </ul>

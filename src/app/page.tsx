@@ -1,13 +1,14 @@
 // In page.tsx
 "use client";
 import NavButton from "@/components/NavButtons";
-import SocialLinks from "@/components/SocialLinks";
+import Contact from "@/components/Contact";
 // No longer need to import Typewriter here
 // FIX: Import the renamed component
 import Home from '@/components/Home'; // Adjust the path if necessary
 import Skills from "@/components/Skills";
 import Navbar from "@/components/NavBar";
 import Project from "@/components/Project";
+import About from "@/components/AboutMe";
 
 export default function Portfolio() {
   return (
@@ -22,10 +23,12 @@ export default function Portfolio() {
 
       <Skills />
 
+      <About />
+
       <Project />
 
       <div className="flex flex-col items-center space-y-5">
-        <SocialLinks />
+        <Contact />
       </div>
     </div>
   );

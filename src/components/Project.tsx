@@ -26,8 +26,8 @@ export default function Project() {
     return (
         // Section container with a dark background, padding, and a subtle background glow
         <section id="Projects" className="relative bg-black text-white py-20 px-4 sm:px-6 lg:px-8">
-            {/* Background radial gradient for a glow effect */}
-            <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-radial from-blue-500/10 via-transparent to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+            {/* Background radial gradient for a glow effect - Switched to purple */}
+            <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-radial from-purple-500/10 via-transparent to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Section Title */}
@@ -40,19 +40,19 @@ export default function Project() {
                     {projects.map((project, index) => (
                         <div 
                             key={index} 
-                            // Glassmorphism card effect with transitions for a smooth hover
+                            // Glassmorphism card effect with transitions for a smooth hover - Switched to purple
                             className="group relative bg-gray-900/40 backdrop-blur-sm border border-gray-700 p-6 rounded-xl shadow-lg 
                                        transition-all duration-300 ease-in-out 
-                                       hover:border-blue-500 hover:shadow-blue-500/20 hover:-translate-y-2"
+                                       hover:border-purple-500 hover:shadow-purple-500/20 hover:-translate-y-2"
                         >
                             {/* Card content */}
                             <h3 className="text-2xl font-semibold mb-3 text-gray-100">{project.title}</h3>
                             <p className="text-gray-400 mb-6">{project.description}</p>
                             
-                            {/* Styled link that acts like a button */}
+                            {/* Styled link that acts like a button - Switched to purple */}
                             <a 
                                 href={project.link} 
-                                className="inline-flex items-center font-medium text-blue-400 group-hover:text-blue-300 transition-colors duration-300" 
+                                className="inline-flex items-center font-medium text-purple-400 group-hover:text-purple-300 transition-colors duration-300" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                             >
