@@ -7,6 +7,7 @@ import SocialLinks from "@/components/SocialLinks";
 import Home from '@/components/Home'; // Adjust the path if necessary
 import Skills from "@/components/Skills";
 import Navbar from "@/components/NavBar";
+import Project from "@/components/Project";
 
 export default function Portfolio() {
   return (
@@ -20,6 +21,8 @@ export default function Portfolio() {
       <Home />
 
       <Skills />
+
+      <Project />
 
       <div className="flex flex-col items-center space-y-5">
         <SocialLinks />
