@@ -25,7 +25,7 @@ const skills = [
 export default function About() {
     return (
         // Section container with dark theme and background glow
-        <section id="About" className="relative bg-black text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <section id="About Me" className="relative bg-black text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
             {/* Background radial gradient for a consistent glow effect */}
             <div className="absolute top-1/2 left-1/2 w-[1000px] h-[1000px] bg-radial from-purple-500/15 via-transparent to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
