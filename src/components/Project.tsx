@@ -13,7 +13,7 @@ const projects = [
     {
         title: "Hotel Management",
         description: "Designed and developed a web portal for a hotel, enabling seamless room booking, cancellations, and automated refund processing.",
-        link: "https://example.com/project-two"
+        link: "https://canararesorts.vercel.app"
     },
     {
         title: "Aakriti Website",
