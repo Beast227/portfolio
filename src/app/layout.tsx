@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className={`{montserrat.className} font-bold`}>
+        <div className={`${montserrat.className} font-bold`}>
           {children}
           <script src="https://app.embed.im/snow.js" defer></script>
         </div>
