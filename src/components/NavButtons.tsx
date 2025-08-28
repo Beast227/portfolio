@@ -1,5 +1,3 @@
-// In components/NavButton.tsx
-
 "use client"
 
 import React from 'react';
@@ -12,14 +10,17 @@ interface NavButtonProps {
 const NavButton = ({ buttonName } : NavButtonProps) => {
   return (
     <StyledWrapper>
-      <a className="button" href={`#${buttonName}`}>{buttonName}</a>
+      {/* The href will link to an ID on your page, e.g., <section id="About Me"> */}
+      <a className="button" href={`#${buttonName}`}>
+        {buttonName}
+      </a>
     </StyledWrapper>
   );
 }
 
 const StyledWrapper = styled.div`
   .button {
-    min-width: 120px;
+    min-width: 100px; /* Made slightly smaller for flexibility */
     position: relative;
     cursor: pointer;
     padding: 12px 17px;
@@ -28,13 +29,10 @@ const StyledWrapper = styled.div`
     color: rgb(255, 255, 255, 0.7);
     font-weight: 500;
     text-align: center;
-    background-color: transparent; // Start with no background
-
-    /* Faster, smoother transition for all properties */
+    background-color: transparent;
     transition: all 0.4s ease-in-out;
   }
 
-  /* This is the underline element */
   .button::before {
     content: "";
     width: 100%;
@@ -42,23 +40,23 @@ const StyledWrapper = styled.div`
     position: absolute;
     bottom: 0;
     left: 0;
-    background: white;
     
-    /* Start scaled down to 0, making it invisible */
+    /* --- CHANGE: Underline color is now purple --- */
+    background: #A855F7; /* A nice purple color */
+    
     transform: scaleX(0);
-    transform-origin: center; /* Ensures it grows from the middle */
-
-    /* Transition the transform property for the growth effect */
+    transform-origin: center;
     transition: transform 0.4s ease-in-out;
   }
 
   .button:hover {
     color: white;
-    transform: scale(1.05) translateY(-2px); /* Slightly more subtle transform */
-    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle glow */
+    transform: scale(1.05) translateY(-2px);
+    
+    /* --- CHANGE: Hover background is now a purple glow --- */
+    background-color: rgba(168, 85, 247, 0.15); 
   }
 
-  /* On hover, scale the underline to its full width */
   .button:hover::before {
     transform: scaleX(1);
   }
